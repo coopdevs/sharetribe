@@ -181,5 +181,6 @@ gem 'rubyzip', '~> 1.3.0'
 gem 'bootsnap', require: false
 gem "select2-rails"
 gem "cocoon"
+gem "fast-polylines"
 
 gem 'donalo', path: 'engines/donalo'
