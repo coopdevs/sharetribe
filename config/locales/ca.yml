@@ -2391,7 +2391,11 @@ ca:
       origin:
         location: Lloc
         origin: Origen
+<<<<<<< HEAD
         the_exact_location: "La ubicació exacta no es mostrarà a altres usuaris."
+=======
+        the_exact_location: ~
+>>>>>>> wti pull
       send_button:
         save_listing: "Publica fitxa"
         submit_for_review: "Enviar per a revisió"
