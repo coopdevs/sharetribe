@@ -3302,11 +3302,19 @@ ca:
         listing_2_id: "Anunci 2 ID"
         listing_3_id: "Anunci 3 ID"
       landing_page_version/section/video:
+<<<<<<< HEAD
         text: Text
         youtube_video_id: "ID del vídeo de YouTube"
       landing_page_version/section/hero:
         cta_button_text: Text
         cta_button_url: URL
+=======
+        text: ~
+        youtube_video_id: ~
+      landing_page_version/section/hero:
+        cta_button_text: ~
+        cta_button_url: ~
+>>>>>>> wti pull
   canada_states:
     AB: Alberta
     BC: "British Columbia"
