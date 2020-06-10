@@ -29,7 +29,6 @@ services:
     depends_on:
       - mysql
     environment:
-      RAILS_ENV: development
       DATABASE_URL: mysql2://sharetribe:secret@mysql/sharetribe_development
       SPHINX_HOST: worker_and_search
   rails-client-assets:
