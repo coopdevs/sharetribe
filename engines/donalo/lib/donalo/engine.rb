@@ -12,6 +12,8 @@ module Donalo
       end
     end
 
+    config.assets.precompile += %w(donalo/styles.css donalo/styles-non-admin.css)
+
     # centralized payments
     initializer "donalo/monkey_patch/centralized_payments" do |app|
       next unless defined?(::StripeHelper)
@@ -126,8 +128,6 @@ module Donalo
           @stripe_account ||= MockStripeAccount.new
         end
       end
-
-      app.config.assets.precompile += %w(donalo/styles.css donalo/styles-non-admin.css)
     end
 
     # stock control
