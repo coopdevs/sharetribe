@@ -135,6 +135,7 @@ window.ST = window.ST || {};
     $('html, body').animate({ scrollTop: $('.flash-notifications').offset().top}, 1000);
   };
 
+  // KON: 6, 7c2f5851-c4fe-451e-967f-4415848d850d
   var formSubmit = function(e) {
     var form = $(this),
       formAction = form.attr('action');
@@ -153,10 +154,12 @@ window.ST = window.ST || {};
         showError(data.error_msg);
       }
     };
+    // Sends request to #initiated
     $.post(formAction, form.serialize(), submitSuccess, 'json');
   };
 
 
+  // KON: 5, 7c2f5851-c4fe-451e-967f-4415848d850d
   var initIntent = function(options){
     stripe = Stripe(options.publishable_key);
     var card = createCard();
@@ -171,6 +174,8 @@ window.ST = window.ST || {};
       }
 
       ST.transaction.toggleSpinner(spinner, true);
+      // this #send-add-card button is the "Confirmar el pago" one. Kon's adblocker blocked 4 GETs
+      // Stripe performed, likely from here.
       stripe.createPaymentMethod('card', card, {}).then(function(result) {
         if (result.error) {
           showError(ST.t('error_messages.stripe.generic_error'));

@@ -6,6 +6,7 @@ module TransactionService::Gateway
     end
 
     def create_payment(tx:, gateway_fields:, force_sync:)
+      # HERE: 1
       result = stripe_api.payments.create_preauth_payment(tx, gateway_fields)
       SyncCompletion.new(result)
     end

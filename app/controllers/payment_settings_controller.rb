@@ -10,6 +10,7 @@ class PaymentSettingsController < ApplicationController
   def index; end
 
   def create
+    byebug
     unless @presenter.stripe_enabled
       redirect_to action: :index
     end

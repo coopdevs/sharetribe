@@ -80,6 +80,8 @@ module Donalo
             seller_account = {}
 
             if gateway_fields[:stripe_payment_method_id].present?
+              # HERE: 3
+              # KON: 8, ef47a0b1-cf7b-468d-9211-7373acabbd8f
               wrap_in_report(tx: tx, start: :create_intent_start, success: :create_intent_success, failed: :create_intent_failed) do
                 do_create_preauth_payment(tx, gateway_fields, seller_account)
               end

@@ -7,6 +7,8 @@ module TransactionService::Process
 
     TxStore = TransactionService::Store::Transaction
 
+    # HERE: -1
+    # Called from TransactionService::Transaction.create
     def create(tx:, gateway_fields:, gateway_adapter:, force_sync:)
       TransactionService::StateMachine.transition_to(tx.id, :initiated)
       tx.current_state = :initiated
@@ -24,6 +26,7 @@ module TransactionService::Process
       end
     end
 
+    # HERE: 0
     def do_create(tx, gateway_fields)
       gateway_adapter = TransactionService::Transaction.gateway_adapter(tx.payment_gateway)
 
@@ -33,6 +36,7 @@ module TransactionService::Process
         force_sync: true)
 
       if completion[:success] && completion[:sync]
+        # HERE: 7
         finalize_create(tx: tx, gateway_adapter: gateway_adapter, force_sync: true)
       elsif !completion[:success]
         delete_failed_transaction(tx)
@@ -41,6 +45,7 @@ module TransactionService::Process
     end
 
     def finalize_create(tx:, gateway_adapter:, force_sync:)
+      # HERE: 8
       ensure_can_execute!(tx: tx, allowed_states: [:initiated, :preauthorized])
 
       if !force_sync
@@ -95,6 +100,7 @@ module TransactionService::Process
 
           booking_res.on_success {
             if tx.stripe_payments.last.try(:intent_requires_action?)
+              # HERE: 9
               TransactionService::StateMachine.transition_to(tx.id, :payment_intent_requires_action)
             else
               TransactionService::StateMachine.transition_to(tx.id, :preauthorized)

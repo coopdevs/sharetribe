@@ -60,6 +60,7 @@ class TransactionProcessStateMachine
     confirmation.cancel!
   end
 
+  # HERE: 10
   after_transition(to: :payment_intent_requires_action, after_commit: true) do |conversation|
     Delayed::Job.enqueue(TransactionPaymentIntentCancelJob.new(conversation.id), :run_at => TransactionPaymentIntentCancelJob::DELAY.from_now)
   end

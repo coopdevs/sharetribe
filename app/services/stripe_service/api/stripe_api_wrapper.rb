@@ -320,6 +320,7 @@ class StripeService::API::StripeApiWrapper
       end
     end
 
+    # KON: 13, e38b2680-7756-470d-a2d4-ac5836e21589
     def confirm_payment_intent(community:, payment_intent_id:)
       with_stripe_payment_config(community) do |payment_settings|
         Stripe::PaymentIntent.new(payment_intent_id).confirm

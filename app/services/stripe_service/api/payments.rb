@@ -188,7 +188,10 @@ module StripeService::API
             currency: total.currency.iso_code,
             description: description,
             metadata: metadata)
+        # payment_method_id means that it come from the form which create the card payment method
+        # and got triggered by JS.
         elsif payment_method_id.present?
+          # KON: 9, ef47a0b1-cf7b-468d-9211-7373acabbd8f
           intent = stripe_api.create_payment_intent(
             community: tx.community_id,
             seller_account_id: seller_id,
@@ -215,8 +218,11 @@ module StripeService::API
         }
         if intent
           payment_data[:stripe_payment_intent_id] = intent.id
+          # KON: 10, ef47a0b1-cf7b-468d-9211-7373acabbd8f
+          # TODO: Continue from here.
           if intent.status == 'requires_action' &&
              intent.next_action.type == 'use_stripe_sdk'
+            # HERE: 5
             payment_data[:stripe_payment_intent_status] = StripePayment::PAYMENT_INTENT_REQUIRES_ACTION
             payment_data[:stripe_payment_intent_client_secret] = intent.client_secret
           elsif intent.status == 'requires_capture'
@@ -224,11 +230,14 @@ module StripeService::API
             payment_data[:stripe_charge_id] = stripe_charge.id
             payment_data[:stripe_payment_intent_status] = StripePayment::PAYMENT_INTENT_REQUIRES_CAPTURE
           elsif intent.status == 'succeeded'
+            # Last step
             payment_data[:stripe_payment_intent_status] = StripePayment::PAYMENT_INTENT_SUCCESS
           else
             payment_data[:stripe_payment_intent_status] = StripePayment::PAYMENT_INTENT_INVALID
           end
         end
+        # KON: 11, ef47a0b1-cf7b-468d-9211-7373acabbd8f
+        # The stripe_payment gets created here in response to the payment intent creation.
         payment = PaymentStore.create(tx.community_id, tx.id, payment_data)
 
         if gateway_fields[:shipping_address].present?

@@ -10,6 +10,7 @@ class TransactionPaymentIntentCancelJob < Struct.new(:transaction_id)
   def perform
     return unless tx
 
+    # HERE: 11
     TransactionService::StateMachine.transition_to(tx.id, :payment_intent_action_expired)
   end
 

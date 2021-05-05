@@ -13,6 +13,7 @@ class TransactionPreauthorizedJob < Struct.new(:transaction_id)
 
   def perform
     transaction = Transaction.find(transaction_id)
+    # KON: 15, e38b2680-7756-470d-a2d4-ac5836e21589
     MailCarrier.deliver_now(TransactionMailer.transaction_preauthorized(transaction))
   end
 end

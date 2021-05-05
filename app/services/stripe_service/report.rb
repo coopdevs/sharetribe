@@ -125,6 +125,7 @@ class StripeService::Report
     result
   end
 
+  # HERE: 4
   def create_intent_start
     result = create_intent.merge({
       "event": "stripe_call"

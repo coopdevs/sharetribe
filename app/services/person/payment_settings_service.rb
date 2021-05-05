@@ -41,6 +41,7 @@ class Person::PaymentSettingsService
     presenter.stripe_account_form = stripe_account_form
     if stripe_account_form.valid?
       account_attrs = stripe_account_form.to_hash
+      account_attrs[:url] = "https://pautestingstripe.coopdevs.org/es/troym"
       account_attrs[:email] =  person.confirmed_notification_email_addresses.first || person.primary_email.try(:address)
       result = stripe_accounts_api.create(community_id: community.id, person_id: person.id, body: account_attrs)
       if result[:success]

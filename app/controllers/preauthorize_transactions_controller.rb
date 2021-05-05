@@ -9,6 +9,7 @@ class PreauthorizeTransactionsController < ApplicationController
   before_action :ensure_authorized_to_reply
   before_action :ensure_can_receive_payment
 
+  # KON: 2, 7c2f5851-c4fe-451e-967f-4415848d850d
   def initiate
     params_validator = params_per_hour? ? TransactionService::Validation::NewPerHourTransactionParams : TransactionService::Validation::NewTransactionParams
     validation_result = params_validator.validate(params.to_unsafe_hash).and_then { |params_entity|
@@ -36,6 +37,7 @@ class PreauthorizeTransactionsController < ApplicationController
     end
   end
 
+  # KON: 7, ef47a0b1-cf7b-468d-9211-7373acabbd8f
   def initiated
     params_validator = params_per_hour? ? TransactionService::Validation::NewPerHourTransactionParams : TransactionService::Validation::NewTransactionParams
     validation_result = params_validator.validate(params.to_unsafe_hash).and_then { |params_entity|
@@ -63,6 +65,7 @@ class PreauthorizeTransactionsController < ApplicationController
     end
   end
 
+  # KON: 12, e38b2680-7756-470d-a2d4-ac5836e21589
   def stripe_confirm_intent
     tx = Transaction.where(community: @current_community).find(params[:id])
     unless tx.participations.include?(@current_user)
@@ -85,6 +88,7 @@ class PreauthorizeTransactionsController < ApplicationController
       stripe_charge = intent['charges']['data'].first
       stripe_payment.update(stripe_charge_id: stripe_charge.id)
       TransactionService::StateMachine.transition_to(tx.id, :preauthorized)
+      # KON: 16, e38b2680-7756-470d-a2d4-ac5836e21589
       render json: {
         success: true,
         redirect_url: person_transaction_path(@current_user, params[:id])
@@ -292,6 +296,8 @@ class PreauthorizeTransactionsController < ApplicationController
     if(opts[:delivery_method] == :shipping)
       transaction[:shipping_price] = opts[:shipping_price]
     end
+    # This ends up calling StripeService::API::Payments.do_create_preauth_payment
+    # StripeService::API::StripeApiWrapper.create_payment_intent overwritten in engine.rb
     TransactionService::Transaction.create({
         transaction: transaction,
         gateway_fields: gateway_fields
@@ -316,6 +322,7 @@ class PreauthorizeTransactionsController < ApplicationController
     params[:per_hour] == '1'
   end
 
+  # KON: 3, 7c2f5851-c4fe-451e-967f-4415848d850d
   def initiation_success(tx_params)
     record_event(
       flash.now,

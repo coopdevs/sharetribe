@@ -55,6 +55,7 @@ module StripeService::Store::StripePayment
 
   def create(community_id, transaction_id, order)
     payment_data = InitialPaymentData.call(order.merge({community_id: community_id, transaction_id: transaction_id}))
+    # HERE: 2
     model = StripePaymentModel.create!(payment_data)
     from_model(model)
   end

@@ -1,0 +1,403 @@
+{
+  "method":"GET",
+  "path":"/es/listings/137-portatil-lenovo-i7",
+  "format":"html",
+  "controller":"ListingsController",
+  "action":"show",
+  "status":200,
+  "duration":261.18,
+  "view":194.73,
+  "db":34.94,
+  "params":{"locale":"es","id":"137-portatil-lenovo-i7"},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"5249f7ea-6e9f-4c8f-907b-489aa745134d"
+}
+{
+  "method":"GET",
+  "path":"/es/listings/137-portatil-lenovo-i7",
+  "format":"html",
+  "controller":"ListingsController",
+  "action":"show",
+  "status":200,
+  "duration":220.16,
+  "view":126.02,
+  "db":47.22,
+  "params":{"locale":"es","id":"137-portatil-lenovo-i7"},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"I6vLntW6ksVyTTxhMV0KVA",
+  "user_agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+  "referer":"",
+  "forwarded_for":"185.205.4.196",
+  "request_uuid":"bc71888c-11a8-4915-8c9d-ffff3784d161"
+}
+{
+  "method":"GET",
+  "path":"/es/transactions/new",
+  "format":"html",
+  "controller":"TransactionsController",
+  "action":"new",
+  "status":302,
+  "duration":39.56,
+  "view":0.0,
+  "db":7.85,
+  "location":"https://donalo.org/es/listings/137/initiate",
+  "params":{"utf8":"✓","quantity":"1","listing_id":"137","locale":"es"},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/es/listings/137-portatil-lenovo-i7",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"11975dcf-3bf8-4163-b5e0-5e990ed141e4"
+}
+{
+  "method":"GET",
+  "path":"/es/listings/137/initiate",
+  "format":"html",
+  "controller":"PreauthorizeTransactionsController",
+  "action":"initiate",
+  "status":200,
+  "duration":165.18,
+  "view":84.54,
+  "db":26.1,
+  "params":{"quantity":"1","locale":"es","listing_id":"137"},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/es/listings/137-portatil-lenovo-i7",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"7c2f5851-c4fe-451e-967f-4415848d850d"
+}
+{
+  "method":"GET",
+  "path":"/es/listings/137/initiate",
+  "format":"*/*",
+  "controller":"PreauthorizeTransactionsController",
+  "action":"initiate",
+  "status":302,
+  "duration":18.08,
+  "view":0.0,
+  "db":1.19,
+  "location":"https://donalo.org/es/login",
+  "params":{"quantity":"1","locale":"es","listing_id":"137"},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"67447678-2f74-46ad-a014-f8bfd0422bdb"
+}
+{
+  "method":"GET",
+  "path":"/es/login",
+  "format":"*/*",
+  "controller":"SessionsController",
+  "action":"new",
+  "status":200,
+  "duration":135.66,
+  "view":85.97,
+  "db":12.47,
+  "params":{"locale":"es"},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"8f50a60c-9eac-4d38-a7a6-bbe5f5090253"
+}
+{
+  "method":"GET",
+  "path":"/es/listings/137/initiate",
+  "format":"html",
+  "controller":"PreauthorizeTransactionsController",
+  "action":"initiate",
+  "status":200,
+  "duration":296.09,
+  "view":55.56,
+  "db":41.01,
+  "params":{"quantity":"1","locale":"es","listing_id":"137"},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/es/listings/137-portatil-lenovo-i7",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"c737f9f5-f36c-4a02-910a-1aeb763c1a51"
+}
+{
+  "transaction_id":186,
+  "tag":"stripe",
+  "free":"create_intent_start",
+  "structured":{"stripe_op":"create_intent","transaction_id":186,"stripe_seller_id":null,"event":"stripe_call"}
+}
+{
+  "transaction_id":186,
+  "tag":"stripe",
+  "free":"create_intent_success",
+  "structured":{"stripe_op":"create_intent","transaction_id":186,"stripe_seller_id":null,"event":"stripe_call_succeeded","stripe_payment_id":120,"stripe_charge_id":null,"stripe_payment_intent_id":"pi_1IlW6tIgVm40D6c66XxnGZVD","stripe_charge_state":"success"}
+}
+{
+  "method":"POST",
+  "path":"/es/listings/137/initiated",
+  "format":"json",
+  "controller":"PreauthorizeTransactionsController",
+  "action":"initiated",
+  "status":200,
+  "duration":2668.97,
+  "view":0.61,
+  "db":99.07,
+  "params":{
+    "utf8":"✓",
+    "authenticity_token":"o6qkv48NfOiWXvryV+XZ1HvyJa0ZIhvezYxRhIyWl80XHjs34U15SNLO3tiB0gSXVQPFpxWccwLTuxnJwZeRXw==",
+    "start_on":"",
+    "end_on":"",
+    "message":"Hola soy Konstantina de Coopdevs,
+    hablasteis con Sergi sobre este portatil",
+    "quantity":"1",
+    "payment_type":"stripe",
+    "stripe_payment_method_id":"pm_1IlW6sIgVm40D6c6nrR3MjZA",
+    "person_id":"ZLz9AFisg9LfmT5pKauU0w",
+    "locale":"es",
+    "listing_id":"137"
+  },
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/es/listings/137/initiate?quantity=1",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"ef47a0b1-cf7b-468d-9211-7373acabbd8f"
+}
+{
+  "method":"POST",
+  "path":"/es/listings/137/preauthorize_transactions/186/stripe_confirm_intent",
+  "format":"json",
+  "controller":"PreauthorizeTransactionsController",
+  "action":"stripe_confirm_intent",
+  "status":200,
+  "duration":2371.45,
+  "view":0.38,
+  "db":59.93,
+  "params":{
+    "stripe_payment_id":"120",
+    "payment_intent_id":"pi_1IlW6tIgVm40D6c66XxnGZVD",
+    "format":"json",
+    "locale":"es",
+    "listing_id":"137",
+    "id":"186"
+  },
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/es/listings/137/initiate?quantity=1",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"e38b2680-7756-470d-a2d4-ac5836e21589"
+}
+{
+  "method":"GET",
+  "path":"/es/konstantinat/transactions/186",
+  "format":"html",
+  "controller":"TransactionsController",
+  "action":"show",
+  "status":200,
+  "duration":201.78,
+  "view":101.62,
+  "db":38.88,
+  "params":{"locale":"es","person_id":"konstantinat","id":"186"},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/es/listings/137/initiate?quantity=1",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"5c7ab585-2b10-4ecb-900c-8090760ef966"
+}
+{
+  "method":"GET",
+  "path":"/",
+  "format":"*/*",
+  "controller":"HomepageController",
+  "action":"index",
+  "status":200,
+  "duration":315.43,
+  "view":162.5,
+  "db":40.4,
+  "params":{},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"",
+  "user_agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36",
+  "referer":"",
+  "forwarded_for":"34.222.229.180",
+  "request_uuid":"93b78f52-5ea9-4e3f-8cb2-d665514017a0"
+}
+{
+  "method":"GET",
+  "path":"/",
+  "format":"*/*",
+  "controller":"HomepageController",
+  "action":"index",
+  "status":200,
+  "duration":185.1,
+  "view":78.51,
+  "db":26.97,
+  "params":{},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"",
+  "user_agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36",
+  "referer":"",
+  "forwarded_for":"18.237.121.120",
+  "request_uuid":"a4769ec8-53d3-49c1-92a5-bd7a4929c417"
+}
+{
+  "method":"GET",
+  "path":"/",
+  "format":"*/*",
+  "controller":"HomepageController",
+  "action":"index",
+  "status":200,
+  "duration":206.45,
+  "view":89.04,
+  "db":30.81,
+  "params":{},
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"",
+  "user_agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36",
+  "referer":"",
+  "forwarded_for":"34.217.47.31",
+  "request_uuid":"20080a0c-e7dc-4732-8d7c-c921b763a3f8"
+}
+
+
+# Logs greping `cat log/unicorn.std.log | grep '"transaction_id":186'`
+{
+  "transaction_id":186,
+  "tag":"stripe",
+  "free":"create_intent_start",
+  "structured":{
+    "stripe_op":"create_intent",
+    "transaction_id":186,
+    "stripe_seller_id":null,
+    "event":"stripe_call"
+  }
+}
+{
+  "transaction_id":186,
+  "tag":"stripe",
+  "free":"create_intent_success",
+  "structured":{
+    "stripe_op":"create_intent",
+    "transaction_id":186,
+    "stripe_seller_id":null,
+    "event":"stripe_call_succeeded",
+    "stripe_payment_id":120,
+    "stripe_charge_id":null,
+    "stripe_payment_intent_id":"pi_1IlW6tIgVm40D6c66XxnGZVD",
+    "stripe_charge_state":"success"
+  }
+}
+{
+  "transaction_id":186,
+  "tag":"stripe",
+  "free":"capture_intent_start",
+  "structured":{
+    "stripe_op":"capture_intent",
+    "transaction_id":186,
+    "stripe_payment_id":120,
+    "stripe_seller_id":null,
+    "stripe_charge_id":"ch_1IlW8cIgVm40D6c6iCdTXtXK",
+    "stripe_payment_intent_id":"pi_1IlW6tIgVm40D6c66XxnGZVD",
+    "event":"stripe_call"
+  }
+}
+{
+  "transaction_id":186,
+  "tag":"stripe",
+  "free":"capture_intent_success",
+  "structured":{
+    "stripe_op":"capture_intent",
+    "transaction_id":186,
+    "stripe_payment_id":120,
+    "stripe_seller_id":null,
+    "stripe_charge_id":"ch_1IlW8cIgVm40D6c6iCdTXtXK",
+    "stripe_payment_intent_id":"pi_1IlW6tIgVm40D6c66XxnGZVD",
+    "event":"stripe_call_succeeded",
+    "stripe_charge_state":"success"
+  }
+}
+
+# Failed transaction from Kon
+#
+# stripe_payment.id = 122
+# transaction_id = 188
+# listing_id = 140
+{
+  "method":"POST",
+  "path":"/es/listings/140/initiated",
+  "format":"json",
+  "controller":"PreauthorizeTransactionsController",
+  "action":"initiated",
+  "status":200,
+  "duration":2694.25,
+  "view":0.69,
+  "db":101.83,
+  "params":{
+    "utf8":"✓",
+    "authenticity_token":"Aiu/og2tSDyjXa74dlNWAJsTYbLeaoHAXcKOrts+Y+i2nyAqY+1NnOfNitKgZItDteKBuNLU6RxD9cbjlj9leg==",
+    "start_on":"",
+    "end_on":"",
+    "message":"",
+    "quantity":"1",
+    "payment_type":"stripe",
+    "stripe_payment_method_id":"pm_1IlaZdIgVm40D6c6HidXsYPS",
+    "person_id":"ZLz9AFisg9LfmT5pKauU0w",
+    "locale":"es",
+    "listing_id":"140"
+  },
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/es/listings/140/initiate?quantity=1",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"c14ff735-b5b8-40ea-9bcb-b80b8ec455e0"
+}
+{
+  "method":"POST",
+  "path":"/es/listings/140/preauthorize_transactions/188/stripe_confirm_intent",
+  "format":"json",
+  "controller":"PreauthorizeTransactionsController",
+  "action":"stripe_confirm_intent",
+  "status":302,
+  "duration":163.99,
+  "view":0.0,
+  "db":11.34,
+  "location":"https://donalo.org/es/listings/140-portatil-lenovo-i7",
+  "params":{
+    "stripe_payment_id":"122",
+    "payment_intent_id":"pi_1IlaZeIgVm40D6c6aKnCQhtu",
+    "format":"json",
+    "locale":"es",
+    "listing_id":"140",
+    "id":"188"
+  },
+  "host":"donalo.org",
+  "community_id":1,
+  "current_user_id":"ZLz9AFisg9LfmT5pKauU0w",
+  "user_agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
+  "referer":"https://donalo.org/es/listings/140/initiate?quantity=1",
+  "forwarded_for":"139.47.115.232",
+  "request_uuid":"1dc3db25-b405-434c-88ab-0ebb1419433d"
+}

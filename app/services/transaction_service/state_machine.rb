@@ -66,6 +66,7 @@ module TransactionService
 
     # privates
 
+    # KON: 14, e38b2680-7756-470d-a2d4-ac5836e21589
     def preauthorized(transaction, payment_type)
       expiration_period = TransactionService::Transaction.authorization_expiration_period(payment_type)
       gateway_expires_at = case payment_type

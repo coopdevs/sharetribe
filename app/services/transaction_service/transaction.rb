@@ -109,6 +109,7 @@ module TransactionService::Transaction
 
     tx = TxStore.create(opts_tx.merge(tx_process_settings))
 
+    # This ends up calling TransactionService::Process::Preauthorize.new
     tx_process = tx_process(tx[:payment_process])
     gateway_adapter = gateway_adapter(tx[:payment_gateway])
     res = tx_process.create(tx: tx,

@@ -47,6 +47,7 @@ class TransactionsController < ApplicationController
       when matches([:none])
         render_free(listing_model: listing_model, author_model: author_model, community: @current_community, params: transaction_params)
       when matches([:preauthorize, :paypal]), matches([:preauthorize, :stripe]), matches([:preauthorize, [:paypal, :stripe]])
+        # KON: 1, 11975dcf-3bf8-4163-b5e0-5e990ed141e4
         redirect_to initiate_order_path(transaction_params)
       else
         opts = "listing_id: #{listing_id}, payment_gateway: #{gateway}, payment_process: #{process}, booking: #{booking}"
