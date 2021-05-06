@@ -45,7 +45,7 @@ end
 Mysql2::Client.prepend(MutexLockedQuerying)
 
 def clean_db
-  DatabaseCleaner.clean_with :deletion
+  DatabaseCleaner.clean_with :deletion, { except: %w[masked_people] }
   load_default_test_data_to_db_before_suite
   load_default_test_data_to_db_before_test
 end
