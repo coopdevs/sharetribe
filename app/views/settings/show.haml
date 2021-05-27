@@ -114,6 +114,8 @@
         - custom_field.with_type do |field_type|
           - prefix = "person[custom_field_values_attributes][]"
           .inline-label-container
+            - name = custom_field.name(I18n.locale)
+            - next if name == '_Rol' && !@service.admin_acts_as_person?
             = label "person_custom_fields", index, "#{custom_field.name(I18n.locale)}#{custom_field.required ? '*' : ''}",
               class: 'inline'
             - if custom_field.public?
